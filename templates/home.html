@@ -1,0 +1,85 @@
+
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block contents %}
+     <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-8 mb-5">
+                <h2>Marvel Cinematic Universe Website</h2>
+                <hr>
+                <p>This website is for the Marvel Cinematic Universe (MCU). You can use it to learn about the movies inside
+                    this universe or about the characters.</p>
+                <p>You can also have your own list of MCU movies in your My Watch List. This sections allows you to add movies
+                    that you would like to watch.</p>
+                <p>This website has three different sections: characters, movies and your watch list. You can get more
+                    information on these sections down below.</p>
+            </div>
+            <div class="col-md-4 mb-5">
+                <h2>Contact Us</h2>
+                <hr>
+                <address>
+                    <strong>Waleed Iqbal</strong>
+                    <br>Concordia University
+                    <br>Montreal, Qc
+                    <br>
+                </address>
+                <address>
+                    <abbr title="Phone"># :</abbr>
+                    (514) 123-4567
+                    <br>
+                    <abbr title="Email">@ :</abbr>
+                    <a href="mailto:#">waleediqbal@concordia.ca</a>
+                </address>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <img class="card-img-top" src="../static/images/MarvelCharactersCard.jpg" alt="Marvel Characters">
+                    <div class="card-body">
+                        <h4 class="card-title">Characters</h4>
+                        <p class="card-text">There are many characters inside the Marvel Cinematic Universe. The most known are the
+                            original Avengers but over the years, many more have been added with the movies.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{ url_for('characters') }}" class="btn btn-danger">Check Them Out!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <img class="card-img-top" src="../static/images/MarvelMoviesCard.jpg" alt="Marvel Movies">
+                    <div class="card-body">
+                        <h4 class="card-title">Movies</h4>
+                        <p class="card-text">Since the release of Iron Man in 2008, which is the first movie in the MCU, there have
+                            been a total of 23 movies released in this universe. </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{ url_for('movies') }}" class="btn btn-danger">Check Them Out!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <img class="card-img-top" src="../static/images/ToWatchCard.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">My Watch List</h4>
+                        <p class="card-text">There are so many MCU movies that you do not know which ones to watch or even re-watch.
+                            You can use this list which is your own personal list, to organize these movies to watch.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{ url_for('MyWatchList') }}" class="btn btn-danger">Check It Out!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- /.row -->
+    </div>
+    <!-- /.container -->
+{% endblock %}

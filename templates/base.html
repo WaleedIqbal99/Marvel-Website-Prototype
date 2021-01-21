@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>{% block title %}Assignement2{% endblock %}</title>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-md navbar-fixed-top navbar-dark bg-danger main-nav">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('MyWatchList', page='MyWatchList') }}">My Watch List</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('home', page='home') }}"><img src="../static/images/MarvelLogo.jpg" alt="Marvel"
+                   style="width:150px;"></a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('characters', page='characters') }}">Characters</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('movies', page='movies') }}">Movies</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Big Picture -->
+    <section class="py-5 bg-image-full mb-4" style="background-image: url('../static/images/MarvelCharacters.jpg');">
+        <div style="height: 150px;"></div>
+    </section>
+
+    {% block contents %}{% endblock %}
+
+    <!-- Footer -->
+    <footer class="py-5 bg-danger">
+        <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Waleed Iqbal 2020</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>
